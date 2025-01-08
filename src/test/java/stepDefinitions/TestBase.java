@@ -1,7 +1,5 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,11 +8,15 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import service.LoginService;
 import utils.PropertiesReader;
+
+import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-    private WebDriver driver;
+    protected static WebDriver driver;
+    protected static LoginService loginService;
 
     public void setup(){
         System.out.println("\nEntering Setup in TestBase\n");
@@ -52,15 +54,25 @@ public class TestBase {
         }
         System.out.println("\nDriver Initialized: " + driver + "\n");
         getDriver().get("https://www.demoblaze.com/");
+        getDriver().manage().window().maximize();
+
+        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+        initServices();
     }
 
-    public WebDriver getDriver(){
+    public static WebDriver getDriver(){
         System.out.println("++++++Getting Driver: " + driver + "++++++++");
 
-        return this.driver;
+        return driver;
     }
 
     public void tearDown(){
-        this.driver.quit();
+        System.out.println("******Tearing Down******");
+        driver.quit();
+    }
+
+    private void initServices(){
+        loginService = new LoginService(getDriver());
     }
 }

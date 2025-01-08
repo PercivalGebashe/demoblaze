@@ -1,13 +1,12 @@
 package stepDefinitions;
 
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
 import service.LoginService;
 
 import static org.testng.Assert.assertEquals;
@@ -15,42 +14,39 @@ import static org.testng.Assert.assertTrue;
 
 public class LoginStepDefinitions extends TestBase{
 
-    LoginService service;
-
-    @Given("I visit website")
-    public void getURL() {
+    @Given("I visit {string} website")
+    public void getURL(String expected) {
         System.out.println("\n********Entering Given*******");
-//        WebDriver driver = super.getDriver();
-//        System.out.println("\n********Got Web driver*******");
-//        System.out.println("\n********Driver:" + driver + " Given*******");
-//        driver.get(url);
-//        System.out.println("\n********Opened link*******");
+
+        WebDriver driver = getDriver();
+        String actual = driver.getCurrentUrl();
+
+        assertEquals(actual, expected);
     }
 
     @When("I click the login button")
     public void login() {
+
         System.out.println("Setting up Login service");
-        WebDriver driver = super.getDriver();
-        System.out.println("Driver is: " + driver);
-        service = new LoginService(driver);
+        System.out.println("Login service: " + loginService);
         System.out.println("Success");
-        service.openLoginModal();
+        loginService.openLoginModal();
     }
 
     @And("Enter my login details {string} and {string}")
     public void enterLoginDetails(String username, String password) {
-        service.login(username, password);
+        loginService.login(username, password);
     }
 
     @Then("I should be successfully logged in")
-    public void loginSuccess() {
-        WebElement btn = service.logoutBtn();
-        assertTrue(btn.isDisplayed());
+    public void loginSuccess() throws InterruptedException {
+        By elementLoc = loginService.getLogoutBtnLoc();
+        assertTrue(loginService.elementIsDisplayed(elementLoc));
     }
 
     @And("Greeted with the welcome message {string}")
     public void confirmLogin(String msg) {
-        WebElement btn = service.WelcomeUser();
+        WebElement btn = loginService.WelcomeUser();
 
         assertEquals(btn.getText(), msg);
     }

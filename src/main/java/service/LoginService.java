@@ -1,7 +1,13 @@
 package service;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
+
+import java.time.Duration;
 
 public class LoginService extends BasePage {
 
@@ -10,7 +16,7 @@ public class LoginService extends BasePage {
     }
 
     public void openLoginModal(){
-        super.loginModalLoginBtn().click();
+        super.loginBtn().click();
     }
 
     public void closeLoginModal(){
@@ -18,8 +24,8 @@ public class LoginService extends BasePage {
     }
 
     public void login(String username, String password){
-        openLoginModal();
 
+//        openLoginModal();
         super.usernameTextField().sendKeys(username);
         super.passwordTextField().sendKeys(password);
 
@@ -32,8 +38,11 @@ public class LoginService extends BasePage {
 
     public void getUsername(){
 
-
     }
 
-
+    public boolean elementIsDisplayed(By by) throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(super.getDriver(), Duration.ofSeconds(5));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(by));
+        return element.isDisplayed();
+    }
 }

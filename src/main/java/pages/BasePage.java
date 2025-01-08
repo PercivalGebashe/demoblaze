@@ -9,24 +9,25 @@ public class BasePage {
 
     WebDriver driver;
 
-    By loginBtnLoc =  By.xpath(LocatorReader.getLocator("BasePage", "loginBtn"));
-    By logoutBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "logoutBtn"));
-    By usernameTextFieldLoc = By.xpath(LocatorReader.getLocator("BasePage", "usernameTextField"));
-    By passwordTextFieldLoc = By.xpath(LocatorReader.getLocator("BasePage", "passwordTextField"));
-    By LoginModalCloseBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "LoginModalCloseBtn"));
-    By loginModalLoginBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "loginModalLoginBtn"));
-    By welcomeUserBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "welcomeUserBtn"));
+    private final By loginBtnLoc =  By.xpath(LocatorReader.getLocator("BasePage", "loginBtn"));
+    private final By logoutBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "logoutBtn"));
+    private final By usernameTextFieldLoc = By.xpath(LocatorReader.getLocator("BasePage", "usernameTextField"));
+    private final By passwordTextFieldLoc = By.xpath(LocatorReader.getLocator("BasePage", "passwordTextField"));
+    private final By LoginModalCloseBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "LoginModalCloseBtn"));
+    private final By loginModalLoginBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "loginModalLoginBtn"));
+    private final By welcomeUserBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "welcomeUserBtn"));
 
     public BasePage(WebDriver driver){
         this.driver = driver;
     }
 
-    public WebElement LoginBtn(){
+    public WebElement loginBtn(){
         return driver.findElement(loginBtnLoc);
     }
 
     public WebElement logoutBtn(){
         return driver.findElement(logoutBtnLoc);
+
     }
 
     public WebElement usernameTextField(){
@@ -47,5 +48,37 @@ public class BasePage {
 
     public WebElement WelcomeUser(){
         return driver.findElement(welcomeUserBtnLoc);
+    }
+
+    public WebDriver getDriver(){
+        return driver;
+    }
+
+    public By getLoginBtnLoc() {
+        return loginBtnLoc;
+    }
+
+    public By getLogoutBtnLoc() {
+        return logoutBtnLoc;
+    }
+
+    public By getUsernameTextFieldLoc() {
+        return usernameTextFieldLoc;
+    }
+
+    public By getPasswordTextFieldLoc() {
+        return passwordTextFieldLoc;
+    }
+
+    public By getLoginModalCloseBtnLoc() {
+        return LoginModalCloseBtnLoc;
+    }
+
+    public By getLoginModalLoginBtnLoc() {
+        return loginModalLoginBtnLoc;
+    }
+
+    public By getWelcomeUserBtnLoc() {
+        return welcomeUserBtnLoc;
     }
 }
