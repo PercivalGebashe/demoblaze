@@ -39,10 +39,4 @@ public class LoginService extends BasePage {
     public void getUsername(){
 
     }
-
-    public boolean elementIsDisplayed(By by) throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(super.getDriver(), Duration.ofSeconds(5));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(by));
-        return element.isDisplayed();
-    }
 }

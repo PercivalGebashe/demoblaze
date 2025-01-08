@@ -7,10 +7,10 @@ import utils.LocatorReader;
 
 public class ProducutDetailsPage extends BasePage{
 
-    private final By productNameLoc = By.xpath(LocatorReader.getLocator("ProducutDetailsPage", "productName"));
-    private final By productPriceLoc = By.xpath(LocatorReader.getLocator("ProducutDetailsPage", "productPrice"));
-    private final By productDescriptionLoc = By.xpath(LocatorReader.getLocator("ProducutDetailsPage", "productDescription"));
-    private final By addToCartBtnLoc =  By.xpath(LocatorReader.getLocator("ProducutDetailsPage", "addToCartBtn"));
+    private final By productNameLoc = By.xpath(LocatorReader.getLocator("ProductDetailsPage", "productName"));
+    private final By productPriceLoc = By.xpath(LocatorReader.getLocator("ProductDetailsPage", "productPrice"));
+    private final By productDescriptionLoc = By.xpath(LocatorReader.getLocator("ProductDetailsPage", "productDescription"));
+    private final By addToCartBtnLoc =  By.xpath(LocatorReader.getLocator("ProductDetailsPage", "addToCartBtn"));
 
     public ProducutDetailsPage(WebDriver driver) {
         super(driver);
@@ -31,5 +31,21 @@ public class ProducutDetailsPage extends BasePage{
 
     public WebElement addToCartBtn(){
         return driver.findElement(addToCartBtnLoc);
+    }
+
+    public By getProductNameLoc() {
+        return productNameLoc;
+    }
+
+    public By getProductPriceLoc() {
+        return productPriceLoc;
+    }
+
+    public By getProductDescriptionLoc() {
+        return productDescriptionLoc;
+    }
+
+    public By getAddToCartBtnLoc() {
+        return addToCartBtnLoc;
     }
 }

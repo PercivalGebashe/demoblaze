@@ -3,7 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.LocatorReader;
+
+import java.time.Duration;
+import java.util.List;
 
 public class BasePage {
 
@@ -16,6 +21,7 @@ public class BasePage {
     private final By LoginModalCloseBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "LoginModalCloseBtn"));
     private final By loginModalLoginBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "loginModalLoginBtn"));
     private final By welcomeUserBtnLoc = By.xpath(LocatorReader.getLocator("BasePage", "welcomeUserBtn"));
+    private final By productCardsLoc = By.xpath(LocatorReader.getLocator("BasePage","ProductCards"));
 
     public BasePage(WebDriver driver){
         this.driver = driver;
@@ -50,6 +56,16 @@ public class BasePage {
         return driver.findElement(welcomeUserBtnLoc);
     }
 
+    public List<WebElement> productCards(){
+        return driver.findElements(productCardsLoc);
+    }
+
+    public WebElement getWebElement(By by) throws InterruptedException {
+        System.out.println("BasePage: " + "getWebElement");
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+        return wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
     public WebDriver getDriver(){
         return driver;
     }
@@ -80,5 +96,9 @@ public class BasePage {
 
     public By getWelcomeUserBtnLoc() {
         return welcomeUserBtnLoc;
+    }
+
+    public By getProductCardsLoc() {
+        return productCardsLoc;
     }
 }
