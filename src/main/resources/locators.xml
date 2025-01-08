@@ -8,4 +8,10 @@
         <locator name = "loginModalLoginBtn" type = "xpath">//div[@id='logInModal']//button[normalize-space()='Log in']</locator>
         <locator name = "welcomeUserBtn" type = "xpath">//a[@id='nameofuser']</locator>
     </page>
+    <page name="ProductDetailsPage">
+        <locator name = "productName" type="xpath">//div[@id='tbodyid']//h2[@class='name']</locator>
+        <locator name = "productPrice" type = "xpath">//div[@id='tbodyid']//h3[@class='price-container']</locator>
+        <locator name = "productDescription" type = "xpath">//div[@id='tbodyid']//div[@id='more-information']//p</locator>
+        <locator name = "addToCartBtn" type = "xpath">//div[@id='tbodyid']//a</locator>
+    </page>
 </locators>
