@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemoBlaze Cucumber Test Suite">
+    <test name="DemoBlaze">
+        <classes>
+            <class name="runner.TestRunner"/>
+            <class name="stepDefinitions.TestBase"/>
+        </classes>
+    </test>
+</suite>
