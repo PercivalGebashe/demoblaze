@@ -61,9 +61,22 @@ public class BasePage {
     }
 
     public WebElement getWebElement(By by) throws InterruptedException {
-        System.out.println("BasePage: " + "getWebElement");
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
         return wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
+    public void swithToAlert(){
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.alertIsPresent());
+    }
+
+    public void acceptAlert(){
+        swithToAlert();
+        getDriver().switchTo().alert().accept();
+    }
+
+    public String getAlertText(){
+        return getDriver().switchTo().alert().getText();
     }
 
     public WebDriver getDriver(){

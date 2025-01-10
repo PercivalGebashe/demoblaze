@@ -70,4 +70,12 @@ public class DemoBlazeStepDefinitions extends TestBase{
         By addToCartLoc = page.getAddToCartBtnLoc();
         productDetailsService.addToCart(addToCartLoc);
     }
+
+    @Then("I should see alert {string}")
+    public void iShouldSeeAlert(String alertMsg) {
+        homeItemsService.swithToAlert();
+        String actualAlertMsf = homeItemsService.getAlertText();
+        homeItemsService.acceptAlert();
+        assertEquals(actualAlertMsf, alertMsg);
+    }
 }
