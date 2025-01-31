@@ -1,11 +1,11 @@
-package pages;
+package com.github.percivalgebashe.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.LocatorReader;
+import com.github.percivalgebashe.utils.LocatorReader;
 
 import java.time.Duration;
 import java.util.List;
@@ -25,6 +25,10 @@ public class BasePage {
 
     public BasePage(WebDriver driver){
         this.driver = driver;
+    }
+
+    public BasePage(){
+
     }
 
     public WebElement loginBtn(){
@@ -65,17 +69,25 @@ public class BasePage {
         return wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
-    public void swithToAlert(){
+    public boolean alertPressent(){
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.alertIsPresent());
+        return true;
+    }
+
+    public void switchToAlert(){
+        if(alertPressent()){
+            driver.switchTo().alert();
+        }
     }
 
     public void acceptAlert(){
-        swithToAlert();
+        switchToAlert();
         getDriver().switchTo().alert().accept();
     }
 
     public String getAlertText(){
+        switchToAlert();
         return getDriver().switchTo().alert().getText();
     }
 

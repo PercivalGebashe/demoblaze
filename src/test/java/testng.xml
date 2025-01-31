@@ -4,7 +4,7 @@
     <test name="DemoBlaze">
         <classes>
             <class name="runner.TestRunner"/>
-            <class name="stepDefinitions.TestBase"/>
+<!--            <class name="com.github.percivalgebashe.utils.WebDriverUtil"/>-->
         </classes>
     </test>
 </suite>

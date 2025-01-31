@@ -1,4 +1,4 @@
-package stepDefinitions;
+package com.github.percivalgebashe.utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -8,16 +8,19 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import service.HomeItemsService;
-import service.LoginService;
-import service.ProductDetailsService;
-import utils.PropertiesReader;
+import com.github.percivalgebashe.service.HomeItemsService;
+import com.github.percivalgebashe.service.LoginService;
+import com.github.percivalgebashe.service.ProductDetailsService;
+import com.github.percivalgebashe.utils.PropertiesReader;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public class WebDriverUtil {
 
     protected static WebDriver driver;
+    protected static WebDriverWait wait;
     protected static LoginService loginService;
     protected static HomeItemsService homeItemsService;
     protected static  ProductDetailsService productDetailsService;
@@ -54,7 +57,15 @@ public class TestBase {
         }
         getDriver().manage().window().maximize();
 
-        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(
+                Duration.ofSeconds(Long.parseLong(PropertiesReader.getProperty("implicitWait"))));
+
+
+
+        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(
+                Long.parseLong(PropertiesReader.getProperty("explicitWait"))
+            )
+        );
 
         initServices();
     }

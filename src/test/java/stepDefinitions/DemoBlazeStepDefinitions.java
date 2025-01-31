@@ -7,13 +7,14 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pages.ProducutDetailsPage;
-import service.HomeItemsService;
+
+import com.github.percivalgebashe.utils.WebDriverUtil;
+import com.github.percivalgebashe.pages.ProductDetailsPage;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class DemoBlazeStepDefinitions extends TestBase{
+public class DemoBlazeStepDefinitions extends WebDriverUtil {
 
     @Given("I visit {string} website")
     public void getURL(String url) {
@@ -58,7 +59,7 @@ public class DemoBlazeStepDefinitions extends TestBase{
 
     @Then("I should be on the product details page and see {string}")
     public void isOnProductsDetails(String expectedProductName) {
-        ProducutDetailsPage page = new ProducutDetailsPage(getDriver());
+        ProductDetailsPage page = new ProductDetailsPage(getDriver());
         String actualProductName = page.productName().getText();
         assertEquals(actualProductName, expectedProductName);
 
@@ -66,14 +67,14 @@ public class DemoBlazeStepDefinitions extends TestBase{
 
     @When("I click the add to card button")
     public void clickAddToCart() {
-        ProducutDetailsPage page = new ProducutDetailsPage(getDriver());
+        ProductDetailsPage page = new ProductDetailsPage(getDriver());
         By addToCartLoc = page.getAddToCartBtnLoc();
         productDetailsService.addToCart(addToCartLoc);
     }
 
     @Then("I should see alert {string}")
     public void iShouldSeeAlert(String alertMsg) {
-        homeItemsService.swithToAlert();
+        homeItemsService.switchToAlert();
         String actualAlertMsf = homeItemsService.getAlertText();
         homeItemsService.acceptAlert();
         assertEquals(actualAlertMsf, alertMsg);

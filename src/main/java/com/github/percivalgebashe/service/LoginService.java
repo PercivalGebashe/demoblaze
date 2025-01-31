@@ -1,13 +1,7 @@
-package service;
+package com.github.percivalgebashe.service;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.BasePage;
-
-import java.time.Duration;
+import com.github.percivalgebashe.pages.BasePage;
 
 public class LoginService extends BasePage {
 

@@ -1,18 +1,18 @@
-package pages;
+package com.github.percivalgebashe.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utils.LocatorReader;
+import com.github.percivalgebashe.utils.LocatorReader;
 
-public class ProducutDetailsPage extends BasePage{
+public class ProductDetailsPage extends BasePage{
 
     private final By productNameLoc = By.xpath(LocatorReader.getLocator("ProductDetailsPage", "productName"));
     private final By productPriceLoc = By.xpath(LocatorReader.getLocator("ProductDetailsPage", "productPrice"));
     private final By productDescriptionLoc = By.xpath(LocatorReader.getLocator("ProductDetailsPage", "productDescription"));
     private final By addToCartBtnLoc =  By.xpath(LocatorReader.getLocator("ProductDetailsPage", "addToCartBtn"));
 
-    public ProducutDetailsPage(WebDriver driver) {
+    public ProductDetailsPage(WebDriver driver) {
         super(driver);
     }
 

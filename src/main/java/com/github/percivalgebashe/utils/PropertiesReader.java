@@ -1,4 +1,4 @@
-package utils;
+package com.github.percivalgebashe.utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
