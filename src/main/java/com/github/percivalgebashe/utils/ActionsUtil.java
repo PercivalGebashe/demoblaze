@@ -13,7 +13,7 @@ public class ActionsUtil extends WebDriverUtil {
     }
 
     public static void clickElement(WebElement element){
-        element = ge.until(ExpectedConditions.elementToBeClickable(element));
+        element = getWait().until(ExpectedConditions.elementToBeClickable(element));
 
         actions.moveToElement(element).click().perform();
     }

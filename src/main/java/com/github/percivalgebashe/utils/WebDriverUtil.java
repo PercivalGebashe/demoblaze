@@ -82,6 +82,9 @@ public class WebDriverUtil {
         loginService = new LoginService(getDriver());
         homeItemsService = new HomeItemsService(getDriver());
         productDetailsService = new ProductDetailsService(getDriver());
+    }
 
+    public static WebDriverWait getWait() {
+        return wait;
     }
 }

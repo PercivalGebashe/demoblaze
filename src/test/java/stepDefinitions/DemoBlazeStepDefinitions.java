@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.github.percivalgebashe.utils.LoggerUtil;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,6 +21,10 @@ public class DemoBlazeStepDefinitions extends WebDriverUtil {
     public void getURL(String url) {
 
         getDriver().get(url);
+        LoggerUtil.sendInfo(
+                this.getClass().getName(),
+                this.getClass().getMethods()[0].getName(),
+                "Webpage Opened: " + url);
 
         WebDriver driver = getDriver();
         String actual = driver.getCurrentUrl();
@@ -30,23 +35,36 @@ public class DemoBlazeStepDefinitions extends WebDriverUtil {
     @When("I click the login button")
     public void login() {
         loginService.openLoginModal();
+
+        LoggerUtil.sendInfo(
+                this.getClass().getName(),
+                "login",
+                "Successfully clicked the login button");
     }
 
     @And("Enter my login details {string} and {string}")
     public void enterLoginDetails(String username, String password) {
         loginService.login(username, password);
+        LoggerUtil.sendInfo(
+                this.getClass().getName(),
+                "enterLoginDetails",
+                "Successfully entered login details");
     }
 
     @Then("I should be successfully logged in")
     public void loginSuccess() throws InterruptedException {
         By elementLoc = loginService.getLogoutBtnLoc();
         assertTrue(loginService.getWebElement(elementLoc).isDisplayed());
+        LoggerUtil.sendInfo(
+                this.getClass().getName(),
+                "loginSuccess",
+                "Successfully Login in");
+
     }
 
     @And("Greeted with the welcome message {string}")
     public void confirmLogin(String msg) {
         WebElement btn = loginService.WelcomeUser();
-
         assertEquals(btn.getText(), msg);
     }
 
