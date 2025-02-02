@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import com.github.percivalgebashe.utils.LoggerUtil;
 import com.github.percivalgebashe.utils.ScreenShotUtil;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,16 +13,20 @@ import org.openqa.selenium.WebElement;
 
 import com.github.percivalgebashe.utils.WebDriverUtil;
 import com.github.percivalgebashe.pages.ProductDetailsPage;
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class DemoBlazeStepDefinitions extends WebDriverUtil {
 
     @Given("I visit {string} website")
     public void getURL(String url) {
+        ITestResult result = Reporter.getCurrentTestResult();
+        result.setAttribute("driver", getDriver());
 
         getDriver().get(url);
         LoggerUtil.sendInfo(
@@ -32,7 +37,8 @@ public class DemoBlazeStepDefinitions extends WebDriverUtil {
         WebDriver driver = getDriver();
         String actual = driver.getCurrentUrl();
 
-        assertEquals(actual, url);
+//        assertEquals(actual, url);
+        fail();
     }
 
     @When("I click the login button")
@@ -52,12 +58,6 @@ public class DemoBlazeStepDefinitions extends WebDriverUtil {
                 this.getClass().getName(),
                 "enterLoginDetails",
                 "Successfully entered login details");
-        try {
-            String imgSrc = ScreenShotUtil.takeScreenShot(getDriver(),"iClickOnTheProduct");
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Then("I should be successfully logged in")

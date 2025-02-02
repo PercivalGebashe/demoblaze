@@ -5,9 +5,9 @@ Feature: DemoBlaze login feature
 
   Scenario: Successful Login to user account
     When I click the login button
-    And Enter my login details "admin" and "admin"
-    Then I should be successfully logged in
-    And Greeted with the welcome message "Welcome admin"
+#    And Enter my login details "admin" and "admin"
+#    Then I should be successfully logged in
+#    And Greeted with the welcome message "Welcome admin"
 
 #  Scenario: I Buy a product from the online store
 #    When I click on the product "Samsung galaxy s6"

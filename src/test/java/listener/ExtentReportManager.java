@@ -6,6 +6,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.github.percivalgebashe.utils.ScreenShotUtil;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -34,9 +35,20 @@ public class ExtentReportManager implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        test = extent.createTest(result.getName());
-        test.log(Status.FAIL, "Test case failed: " + result.getName());
-        test.log(Status.FAIL, "Test case fail cause: " + result.getThrowable().getMessage());
+        WebDriver driver = (WebDriver) result.getAttribute("driver");
+        if (driver != null) {
+            System.out.println("Driver on fail: " + driver);
+            test = extent.createTest(result.getName());
+            test.log(Status.FAIL, "Test case failed: " + result.getName());
+            test.log(Status.FAIL, "Test case fail cause: " + result.getThrowable().getMessage());
+            String screenshotPath;
+            try {
+                screenshotPath = ScreenShotUtil.takeScreenShot(driver, result.getName());
+                ScreenShotUtil.attachScreenShotToTest(screenshotPath, test);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     @Override

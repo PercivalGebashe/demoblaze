@@ -1,21 +1,19 @@
 package com.github.percivalgebashe.utils;
 
+import com.github.percivalgebashe.service.HomeItemsService;
+import com.github.percivalgebashe.service.LoginService;
+import com.github.percivalgebashe.service.ProductDetailsService;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import com.github.percivalgebashe.service.HomeItemsService;
-import com.github.percivalgebashe.service.LoginService;
-import com.github.percivalgebashe.service.ProductDetailsService;
-import com.github.percivalgebashe.utils.PropertiesReader;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class WebDriverUtil {
 
@@ -75,7 +73,9 @@ public class WebDriverUtil {
     }
 
     public void tearDown(){
-        driver.quit();
+        if(driver != null){
+            driver.quit();
+        }
     }
 
     private void initServices(){

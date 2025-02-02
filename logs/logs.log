@@ -190,3 +190,81 @@ Message: Successfully entered login details
 2025-02-01-13:20-03 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
 Test Method: loginSuccess
 Message: Successfully Login in
+2025-02-02-14:02-48 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:05-08 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:06-30 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:07-36 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:09-31 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:17-02 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:19-25 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:20-43 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:26-35 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:27-24 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:29-24 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:31-03 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:31-52 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:37-32 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:50-33 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:54-27 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-14:56-49 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:08-58 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:09-18 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:11-58 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:18-42 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:21-45 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:26-56 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:31-16 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: isOnProductsDetails
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:35-44 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:36-42 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
