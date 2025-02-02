@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import com.github.percivalgebashe.utils.LoggerUtil;
+import com.github.percivalgebashe.utils.ScreenShotUtil;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,6 +12,8 @@ import org.openqa.selenium.WebElement;
 
 import com.github.percivalgebashe.utils.WebDriverUtil;
 import com.github.percivalgebashe.pages.ProductDetailsPage;
+
+import java.io.IOException;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -49,6 +52,12 @@ public class DemoBlazeStepDefinitions extends WebDriverUtil {
                 this.getClass().getName(),
                 "enterLoginDetails",
                 "Successfully entered login details");
+        try {
+            String imgSrc = ScreenShotUtil.takeScreenShot(getDriver(),"iClickOnTheProduct");
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Then("I should be successfully logged in")
@@ -72,7 +81,6 @@ public class DemoBlazeStepDefinitions extends WebDriverUtil {
     public void iClickOnTheProduct(String productName) throws InterruptedException {
         homeItemsService.selectProduct(productName);
         assertTrue(true);
-
     }
 
     @Then("I should be on the product details page and see {string}")

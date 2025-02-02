@@ -46,3 +46,147 @@ Message: Successfully entered login details
 2025-02-01-11:09-10 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
 Test Method: loginSuccess
 Message: Successfully Login in
+2025-02-01-12:03-38 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-12:03-38 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-12:03-39 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-12:03-41 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-12:08-58 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-12:08-59 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-12:08-59 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-12:09-01 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-12:10-26 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-12:10-26 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-12:10-27 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-12:10-30 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-12:11-39 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-12:11-39 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-12:11-40 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-12:11-42 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-12:31-08 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-12:31-08 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-12:31-08 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-12:31-10 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-12:32-04 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-12:32-04 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-12:32-04 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-12:32-07 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-13:09-50 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-13:09-50 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-13:09-51 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-13:09-53 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-13:11-23 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-13:11-23 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-13:11-23 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-13:11-26 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-13:12-31 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-13:12-31 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-13:12-32 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-13:12-34 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-13:14-26 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-13:14-26 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-13:14-27 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-13:14-30 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-13:19-24 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-13:19-24 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-13:19-24 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-13:19-26 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
+2025-02-01-13:20-01 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-01-13:20-01 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: login
+Message: Successfully clicked the login button
+2025-02-01-13:20-01 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: enterLoginDetails
+Message: Successfully entered login details
+2025-02-01-13:20-03 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Successfully Login in
