@@ -3,7 +3,6 @@
 <suite name="DemoBlaze Cucumber Test Suite">
     
     <listeners>
-        <listener class-name="listener.TestListener" />
         <listener class-name="listener.ExtentReportManager" />
     </listeners>
     <test name="DemoBlaze">

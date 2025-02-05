@@ -23,7 +23,7 @@ public class WebDriverUtil {
     protected static HomeItemsService homeItemsService;
     protected static  ProductDetailsService productDetailsService;
 
-    public void setup(){
+    public static void setup(){
         String browser = PropertiesReader.getProperty("browser"); //to be fetched from file
         boolean headless = PropertiesReader.getProperty("headless").equalsIgnoreCase("true");
         switch(browser.toLowerCase()) {
@@ -33,6 +33,7 @@ public class WebDriverUtil {
                 if (headless) {
                     ffoptions.addArguments("--headless");
                 }
+                ffoptions.setCapability("webSocketUrl", true);
                 driver = new FirefoxDriver(ffoptions);
                 break;
             case "edge":
@@ -41,6 +42,7 @@ public class WebDriverUtil {
                 if (headless) {
                     ieoptions.addArguments("--headless");
                 }
+                ieoptions.setCapability("webSocketUrl", true);
                 driver = new EdgeDriver(ieoptions);
                 break;
 
@@ -50,6 +52,7 @@ public class WebDriverUtil {
                 if (headless) {
                     coptions.addArguments("--headless");
                 }
+                coptions.setCapability("webSocketUrl", true);
                 driver = new ChromeDriver(coptions);
                 break;
         }
@@ -72,13 +75,13 @@ public class WebDriverUtil {
         return driver;
     }
 
-    public void tearDown(){
+    public static void tearDown(){
         if(driver != null){
             driver.quit();
         }
     }
 
-    private void initServices(){
+    private static void initServices(){
         loginService = new LoginService(getDriver());
         homeItemsService = new HomeItemsService(getDriver());
         productDetailsService = new ProductDetailsService(getDriver());

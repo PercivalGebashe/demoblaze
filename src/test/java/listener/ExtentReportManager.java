@@ -6,6 +6,8 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.github.percivalgebashe.utils.ScreenShotUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -20,9 +22,12 @@ public class ExtentReportManager implements ITestListener {
     private ExtentSparkReporter sparkReporter;
     private ExtentReports extent;
     private ExtentTest test;
+    private static final Logger log = LogManager.getLogger(ExtentReportManager.class);
 
     @Override
     public void onTestStart(ITestResult result) {
+        log.info("Test Started: " +
+                "Test Method: " + result.getMethod().getMethodName());
         test = extent.createTest(result.getMethod().getMethodName());
         test.log(Status.INFO, "Test Started: " + result.getTestName());
     }
@@ -35,6 +40,9 @@ public class ExtentReportManager implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
+        log.error("Test Failed: " +
+                "Test Method: " + result.getMethod().getMethodName());
+
         WebDriver driver = (WebDriver) result.getAttribute("driver");
         if (driver != null) {
             System.out.println("Driver on fail: " + driver);
@@ -44,6 +52,7 @@ public class ExtentReportManager implements ITestListener {
             String screenshotPath;
             try {
                 screenshotPath = ScreenShotUtil.takeScreenShot(driver, result.getName());
+                System.out.println("Path: " + screenshotPath);
                 ScreenShotUtil.attachScreenShotToTest(screenshotPath, test);
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -53,6 +62,8 @@ public class ExtentReportManager implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult result) {
+        log.warn("Test Skipped: " +
+                "Test Method: " + result.getMethod().getMethodName());
         test = extent.createTest(result.getName());
         test.log(Status.SKIP, "Test case skipped: " + result.getName());
     }

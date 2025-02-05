@@ -2,7 +2,7 @@
 <Configuration xmlns="https://logging.apache.org/xml/ns"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://logging.apache.org/xml/ns
-                                   https://logging.apache.org/xml/ns/log4j-config-2.xsd">
+               https://logging.apache.org/xml/ns/log4j-config-2.xsd">
 
     <Properties>
         <Property name="filename">./logs</Property>
@@ -25,7 +25,6 @@
                 <pattern>%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
             </PatternLayout>
         </Console>
-
     </appenders>
 
     <loggers>
@@ -37,5 +36,4 @@
             <AppenderRef ref="logFile"/>
         </root>
     </loggers>
-
 </Configuration>

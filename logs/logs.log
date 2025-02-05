@@ -268,3 +268,31 @@ Message: Webpage Opened: https://www.demoblaze.com/
 2025-02-02-15:36-42 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
 Test Method: getURL
 Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-15:43-54 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-16:06-39 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-16:09-52 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-02-16:17-28 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-03-07:05-36 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: loginSuccess
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-03-07:32-02 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-03-07:57-31 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: getURL
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-03-07:59-22 [main] INFO  stepDefinitions.DemoBlazeStepDefinitions - Class: stepDefinitions.DemoBlazeStepDefinitions
+Test Method: isOnProductsDetails
+Message: Webpage Opened: https://www.demoblaze.com/
+2025-02-03-11:57-02 [main] INFO  listener.ExtentReportManager - Test Started: Test Method: runScenario
+2025-02-03-11:57-06 [main] ERROR listener.ExtentReportManager - Test Failed: Test Method: runScenario
+2025-02-03-11:59-54 [main] INFO  listener.ExtentReportManager - Test Started: Test Method: runScenario
+2025-02-03-11:59-58 [main] ERROR listener.ExtentReportManager - Test Failed: Test Method: runScenario
