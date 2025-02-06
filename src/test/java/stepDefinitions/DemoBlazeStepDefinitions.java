@@ -37,8 +37,7 @@ public class DemoBlazeStepDefinitions extends WebDriverUtil {
         WebDriver driver = getDriver();
         String actual = driver.getCurrentUrl();
 
-//        assertEquals(actual, url);
-        fail();
+        assertEquals(actual, url);
     }
 
     @When("I click the login button")
